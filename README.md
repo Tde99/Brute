@@ -50,6 +50,5 @@ sudo python3 bruteforce.py
 5. **Execution:** The script generates and executes the optimal Ncrack command for you.
 
 **Important Notes:**
-* **Package Check:** Ensure 'Ncrack' is installed (`sudo apt install ncrack`) before running.
 * **Ethics:** Strictly for authorized penetration testing and educational purposes.
 * **Performance:** Uses T3/T4 timing templates in Ncrack for a balance between speed and reliability.
