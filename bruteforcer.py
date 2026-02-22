@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 os.system("apt-get install figlet")
+os.system("apt-get install figlet ncrack -y")
 os.system("clear")
 def menu():
 	try:
@@ -105,7 +106,7 @@ BRUTE FORCER
 					targetport = input("Enter the target port(Default 22): ")
 					if  not targetport:
 						targetport = "22"
-					print(f"SMP to {targetip}:{targetport}")
+					print(f"SFTP/SCP to {targetip}:{targetport}")
 					sftp1 = f"ncrack -f -v -T3 -U {userlist} -P {passw} -m ssh:at=1,cd=3s ssh://{targetip}:{targetport}"
 					os.system(sftp1)
 					
@@ -113,7 +114,7 @@ BRUTE FORCER
 					targetport = input("Enter the target port(Default 69): ")
 					if  not targetport:
 						targetport = "69"
-					print(f"SMP to {targetip}:{targetport}")
+					print(f"TFTP to {targetip}:{targetport}")
 					tftp1 = f"ncrack -f -v -T4 -U {userlist} -P {passw} -m tftp:at=1,cd=3s tftp://{targetip}:{targetport}"
 					os.system(tftp1)
 					
@@ -128,7 +129,7 @@ BRUTE FORCER
 4)MongoDB
 5)Redis
 				""")
-				section3 == input("Select one service: ")
+				section3 = input("Select one service: ")
 				
 				if(section3 == "1"):
 					targetport = input("Enter target port(Default 3306): ")
@@ -179,7 +180,7 @@ BRUTE FORCER
 2)HTTP 
 3)HTTPS
 				""")
-				section4 == input("Select one service: ")
+				section4 = input("Select one service: ")
 				if(section4 == "1"):
 					targetport = input("Enter target port(Default 80): ")
 					if not targetport: 
